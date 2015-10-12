@@ -12,7 +12,7 @@ from mcblocks import blocks #mcblocks.py contains block index and colours
 
 im = np.array(Image.open("image.jpg")) #insert target image filename
 
-#image reshaping for easier handling in loop
+#image matrix reshaping for easier handling in loop
 imshape = np.shape(im)
 im2d = np.reshape(im, (imshape[0]*imshape[1], imshape[2])) 
 
