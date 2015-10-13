@@ -17,9 +17,9 @@ imshape = np.shape(im)
 im2d = np.reshape(im, (imshape[0]*imshape[1], imshape[2])) 
 
 # builds a matrix of block ids and states at correct indices
-blockids = [blocks[np.argmin(abs(((blocks[:,2] - x[0])*0.3)**2 +
+blockids = [blocks[np.argmin(((blocks[:,2] - x[0])*0.3)**2 +
                                 ((blocks[:,3] - x[1])*0.59)**2 +
-                                ((blocks[:,4] - x[2])*0.11)**2))][:2]
+                                ((blocks[:,4] - x[2])*0.11)**2)][:2]
                                 for x in im2d]
 
 #reversal of matrix - allows easy block placement from ground up
